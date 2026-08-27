@@ -1,5 +1,5 @@
 {
- "audited_at": "2026-08-27 (2 runs) + 2026-08-28 (run 4: crowd-and-venue draft)",
+ "audited_at": "2026-08-27 (2 runs) + 2026-08-28 (runs 4-5: crowd-and-venue LOCKED v1 + Phase 2 build-out drafts)",
  "scope": "evo_03 video-content Phase 1 + evo_00 ABOUT_AND_AUDIENCE migration + _shared/dna retirement",
  "runs": [
   {
@@ -600,6 +600,97 @@
      "finding": "C11",
      "source": "evo_03/video-content/01_narrative/characters.md:18",
      "reason": "Barbour/tweed confirmed still in locked character sheet"
+    }
+   ]
+  },
+  {
+   "run": 5,
+   "scope": "Phase 2 build-out: character-sheets.md + location-locks.md + style-block.md + 4 bottle templates (all DRAFT v1)",
+   "findings": [
+    {
+     "id": "C1",
+     "claim": "character-sheets.md: 4 paste-ready blocks; Jack R2 rewrite applied (yard oilskin + trackside shirt-tie); Emma summer register; strap-clip + braids flagged not silently applied",
+     "result": "PASS",
+     "detail": "4 blocks with consistency anchors; R2 status 'Ruled 2026-08-28 - applied'; Emma/strap/braids in ruling-status table awaiting veto window"
+    },
+    {
+     "id": "C2",
+     "claim": "Barbour/tweed retired in character-sheets; no live banned-register descriptor anywhere in 02_dna",
+     "result": "PASS",
+     "detail": "'Barbour wax'/'tweed flat cap' appear only as Retired-descriptors doc line (character-sheets.md:56); grep across 02_dna clean"
+    },
+    {
+     "id": "C3",
+     "claim": "location-locks.md: 4 canonical paragraphs, venue-class mods never change emotional job, track names absent",
+     "result": "PASS",
+     "detail": "loc_dawn_yard/parade_ring/stables/owners_box paragraphs placeless; Trentham/Te Rapa etc. appear ONLY in crowd-and-venue.md style-reference context"
+    },
+    {
+     "id": "C4",
+     "claim": "R4 applied: owners box = light-filled sports-bar/casual-restaurant, never dark and pokey; walnut retired",
+     "result": "PASS",
+     "detail": "loc_owners_box paragraph + banned drift lists 'no walnut-panelled private club'"
+    },
+    {
+     "id": "C5",
+     "claim": "style-block.md: style anchor byte-identical to craft-rules.md:35; negative block single-sourced to crowd-and-venue \u00a711 (no duplicate)",
+     "result": "PASS",
+     "detail": "anchor at style-block.md:20 verbatim; \u00a75 links crowd-and-venue.md:265 as sole paste-source; corruption from drafting self-corrected and removed"
+    },
+    {
+     "id": "C6",
+     "claim": "4 bottle templates exist, one per bottle, each with fill-in-the-blanks frame + beat map + locked VO + Own the Experience close + fictional-flag rule",
+     "result": "PASS",
+     "detail": "unlatched-chain / morning-briefing / meeting-snap-back / jockey-high-five, all complete"
+    },
+    {
+     "id": "C7",
+     "claim": "All 4 locked VO lines verbatim from bottles-and-hooks.md; no price/dollar anywhere in 02_dna",
+     "result": "PASS",
+     "detail": "grep: 'program. Owners get the game plan. And the photo.' (unlatched-chain:32), 'Real trainer updates' (morning-briefing:34), 'daydream about race' (meeting-snap-back:35), 'feeling lasts all year' (jockey-high-five:36); $-grep clean"
+    },
+    {
+     "id": "C8",
+     "claim": "Form law + R1/R3 threaded through templates: status-only phone, 60/40 default cited, turf-splattered default with mud variant",
+     "result": "PASS",
+     "detail": "morning-briefing form-law line; jockey-high-five R1+R3 notes; meeting-snap-back dress note excludes desk from register"
+    }
+   ],
+   "evidence_edges": [
+    {
+     "finding": "C2",
+     "source": "evo_03/video-content/02_dna/character-sheets.md:56",
+     "reason": "retired-descriptor doc line only"
+    },
+    {
+     "finding": "C3",
+     "source": "evo_03/video-content/02_dna/location-locks.md",
+     "reason": "grep: track names absent from all paragraphs"
+    },
+    {
+     "finding": "C4",
+     "source": "evo_03/video-content/02_dna/location-locks.md:loc_owners_box",
+     "reason": "R4 wording in paragraph + banned drift"
+    },
+    {
+     "finding": "C5",
+     "source": "evo_03/video-content/01_narrative/craft-rules.md:35",
+     "reason": "anchor byte-match"
+    },
+    {
+     "finding": "C5",
+     "source": "evo_03/video-content/02_dna/crowd-and-venue.md:265",
+     "reason": "sole full negative-block in 02_dna"
+    },
+    {
+     "finding": "C7",
+     "source": "evo_03/video-content/01_narrative/bottles-and-hooks.md:39-43",
+     "reason": "locked VO lines source of truth"
+    },
+    {
+     "finding": "C8",
+     "source": "evo_03/video-content/02_dna/bottle-templates/jockey-high-five.md:39",
+     "reason": "R3 mud-on-grass wording"
     }
    ]
   }

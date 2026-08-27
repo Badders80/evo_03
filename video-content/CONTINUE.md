@@ -1,19 +1,22 @@
 # video-content/CONTINUE — session wrap pointer
 
-**Last session:** 2026-08-27 (see `SESSION_LOG.md` for full detail)
+**Last session:** 2026-08-28 (see `SESSION_LOG.md` for full detail)
 
 ## Status
 
 - **Phase 1 — Narrative Extraction: DONE, locked v1, committed (`adb3740`, `edcd216`), pushed to GitHub.**
-- **Phase 2 — Generation-ready DNA: IN PROGRESS.**
-  `02_dna/crowd-and-venue.md` **LOCKED v1** (2026-08-28) — founder rulings
-  R1–R5 all closed (60/40 cast default with campaign flex; Jack = fashionable
-  oilskin yard / shirt-tie-sports-jacket-chinos trackside, Rodd & Gunn as
-  internal calibration only; mud-on-grass wet variant sanctioned; owners box
-  = light-filled sports-bar/casual-restaurant comfort; pub/Cup dress test
-  canonical). R3 turf fix applied to `01_narrative/bottles-and-hooks.md`
-  (dirt-splattered → turf-splattered ×3). Next: character-sheets →
-  location-locks → style-block → bottle-templates.
+- **Phase 2 — Generation-ready DNA: IN PROGRESS (drafts complete, pending
+  founder sign-off).**
+  - `02_dna/crowd-and-venue.md` — **LOCKED v1** (R1–R5 closed).
+  - `02_dna/character-sheets.md` — DRAFT v1 (R2 Jack rewrite applied; Emma
+    summer + strap-clip + braids flagged for veto window).
+  - `02_dna/location-locks.md` — DRAFT v1 (R4 applied; walnut retired).
+  - `02_dna/style-block.md` — DRAFT v1 (anchor verbatim; negative-block
+    single-sourced to crowd-and-venue §11).
+  - `02_dna/bottle-templates/` — 4/4 DRAFT v1 (locked VO verbatim, Audio Snap
+    beat maps, Own the Experience close, fictional-flag rule).
+  - Audit run 5: 8/8 PASS. Next: founder sign-off → flip 4 drafts to LOCKED
+    → commit/push.
 
 ## Open item for Phase 2 (founder raised → ANSWERED & LOCKED 2026-08-28)
 

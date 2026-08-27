@@ -67,3 +67,71 @@
    style-block, bottle-templates (one per bottle).
 3. Separate small item: `pipelines/studio/legacy` continue.md has pending
    Track C purge + Remotion keep/kill decision (founder, not urgent).
+
+---
+
+# Session Log — 2026-08-28
+
+## What was done
+
+### 1. Phase 2 opened — crowd-and-venue DNA LOCKED v1 (commit `282cf5b`, pushed)
+
+- `02_dna/crowd-and-venue.md` built from founder rulings and **LOCKED v1**
+  (audit run 4: 10 PASS / 1 WARN; WARN = Phase-1 conflicts routed to rulings,
+  not silently edited).
+- **Founder rulings R1–R5, all closed 2026-08-28:**
+  - **R1** — 60/40 male/female featured-cast default; per-campaign flex
+    (e.g. women's-day-at-the-races runs female-forward); lads block-buy =
+    one recurring belonging beat, never the face.
+  - **R2** — Jack's Barbour/tweed retired: yard = fashionable-cut oilskin
+    vest over checked shirt (Rodd & Gunn-adjacent, INTERNAL calibration
+    only — brand name never in a prompt, never on screen); trackside =
+    shirt-tie-sunglasses, sports jacket, chinos.
+  - **R3** — grass always; genuine mud permitted as wet-track texture (mud
+    sits ON grass; `no dirt track` stands). Applied to locked
+    `01_narrative/bottles-and-hooks.md`: dirt-splattered → turf-splattered
+    (×3).
+  - **R4** — owners box re-ground: "clean, functional, comfortable" =
+    modern sports-bar / casual-restaurant feel, open and sunny, never dark
+    and pokey; "mid-century walnut" retired.
+  - **R5** — canonical dress test confirmed verbatim: *"One notch above the
+    pub — a notch below the Cup."* Internal quality gate only.
+- Form ruling (founder, earlier in session): we are NOT form analysis and
+  NOT tipping — we show the horse's living shape (coat, stride, condition,
+  warmup) at the source; betting is a derivative. §8 visual law encodes it.
+
+### 2. Phase 2 file set DRAFTED (4 files + 4 templates, all DRAFT v1)
+
+- `02_dna/character-sheets.md` — paste-ready blocks ×4. R2 applied to Jack;
+  Emma linen summer default; silhouette test per character.
+- `02_dna/location-locks.md` — 4 canonical paragraphs (dawn yard, parade
+  ring, stables, owners box); venue-class mods change scale/light only;
+  track names placeless.
+- `02_dna/style-block.md` — anti-drift lead, verbatim anchor, negative-block
+  single-sourced to crowd-and-venue §11, 5 quality-gate tests, wet variant.
+- `02_dna/bottle-templates/` — 4/4 (Unlatched Chain, Morning Briefing,
+  Meeting Snap-Back, Jockey High-Five): fill-in-the-blanks frame + Audio
+  Snap beat map + locked VO verbatim + "Own the Experience." close +
+  fictional-flag rule.
+
+### 3. Audits (audit-graph-2026-08-27.json)
+
+- Run 4 — crowd-and-venue draft: 10 PASS / 1 WARN (conflicts flagged, not
+  silent).
+- Run 5 — Phase 2 build-out: 8/8 PASS (anchor byte-match, VO verbatim,
+  no-price grep clean, banned-register descriptors live only as "retired"
+  doc lines).
+
+## Open items (next session opens here)
+
+1. **Founder sign-off on 4 flagged items** (silence-approves proposal on
+   the table): (1) Emma linen summer register · (2) Tyler strap clipped
+   once mounted · (3) Nellie braids race-day-only · (4) yard dog in
+   stables paragraph. On sign-off (or veto): flip 4 drafts to LOCKED v1,
+   commit + push as one unit.
+2. Then: assemble one real test prompt per bottle from the DNA to prove
+   the paste-chain end-to-end.
+3. Candidate: feed R1–R5 rulings to gbrain hub as decision cards (evo_00
+   AGENTS.md law) once Phase 2 fully locks.
+4. Standing: legacy continue.md Track C purge + Remotion keep/kill
+   (founder, not urgent).
