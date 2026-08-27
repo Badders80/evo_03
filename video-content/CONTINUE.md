@@ -5,14 +5,30 @@
 ## Status
 
 - **Phase 1 — Narrative Extraction: DONE, locked v1, committed (`adb3740`, `edcd216`), pushed to GitHub.**
-- **Phase 2 — Generation-ready DNA: NOT STARTED.** Next session opens with the venue/crowd question.
+- **Phase 2 — Generation-ready DNA: IN PROGRESS.**
+  `02_dna/crowd-and-venue.md` **LOCKED v1** (2026-08-28) — founder rulings
+  R1–R5 all closed (60/40 cast default with campaign flex; Jack = fashionable
+  oilskin yard / shirt-tie-sports-jacket-chinos trackside, Rodd & Gunn as
+  internal calibration only; mud-on-grass wet variant sanctioned; owners box
+  = light-filled sports-bar/casual-restaurant comfort; pub/Cup dress test
+  canonical). R3 turf fix applied to `01_narrative/bottles-and-hooks.md`
+  (dirt-splattered → turf-splattered ×3). Next: character-sheets →
+  location-locks → style-block → bottle-templates.
 
-## Open item for Phase 2 (founder raised, unresolved)
+## Open item for Phase 2 (founder raised → ANSWERED & LOCKED 2026-08-28)
 
 The 4 locations in `01_narrative/world.md` (`loc_cambridge_dawn`, `loc_parade_ring`,
 `loc_stables`, `loc_owners_lounge`) are venue-agnostic — no track named, no crowd,
 no dress code. Founder flagged this as build debt for video: generic "stylish
 trackside crowd" reads wrong to real racing people.
+
+**Resolved into `02_dna/crowd-and-venue.md` DRAFT v1** — scene-type locks (not
+venue locks), grass always, permanent summer, "made a bit of an effort" dress
+register, form-not-betting law, women-as-investors cast, NZ-first/Oz-familiar
+two-viewer test. All five rulings closed 2026-08-28 (R1 60/40 cast flex · R2
+oilskin yard / shirt-tie-chinos trackside, Rodd & Gunn internal-only · R3 mud
+on grass sanctioned · R4 open sunny sports-bar comfort · R5 pub/Cup dress
+test canonical); file **LOCKED v1**.
 
 **Founder's strategic frame (carry into Phase 2):**
 - Evolution's story spans the smallest provincial track to Happy Valley (HK) /

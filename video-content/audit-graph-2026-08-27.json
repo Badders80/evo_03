@@ -1,5 +1,5 @@
 {
- "audited_at": "2026-08-27 (2 runs)",
+ "audited_at": "2026-08-27 (2 runs) + 2026-08-28 (run 4: crowd-and-venue draft)",
  "scope": "evo_03 video-content Phase 1 + evo_00 ABOUT_AND_AUDIENCE migration + _shared/dna retirement",
  "runs": [
   {
@@ -486,6 +486,120 @@
      "finding": "T9",
      "source": "recursive grep scripts/",
      "reason": "NONE"
+    }
+   ]
+  },
+  {
+   "run": 4,
+   "scope": "02_dna/crowd-and-venue.md DRAFT v1 \u2014 founder rulings of 2026-08-28 encoded; evidence pass",
+   "findings": [
+    {
+     "id": "C1",
+     "claim": "crowd-and-venue.md: 7 scene-type locks (parade_ring, mounting_yard, owners_box, birdcage_post_race, winning_post, dawn_yard, stables)",
+     "result": "PASS",
+     "detail": "all 7 present as scene TYPES with emotional jobs; no venue names in lock headers"
+    },
+    {
+     "id": "C2",
+     "claim": "Real tracks used as style references only; never named in prompts; Happy Valley/Meydan = story span, never generated in v1",
+     "result": "PASS",
+     "detail": "tracks cited as style refs at :25, venue-class table :74-76 marks international 'NEVER generated in v1', two-viewer section :234"
+    },
+    {
+     "id": "C3",
+     "claim": "Grass always; dirt banned via negative prompt block",
+     "result": "PASS",
+     "detail": "surface register 'Grass. Always.' + negative prompt 'no dirt track' at :246"
+    },
+    {
+     "id": "C4",
+     "claim": "Dress register: effort-not-entry, 3 hard bans (Cup glam, Wall Street/golf, posh Brit)",
+     "result": "PASS",
+     "detail": "dress test at \u00a70, banned looks at :131+, featured registers men/women/co-owners present"
+    },
+    {
+     "id": "C5",
+     "claim": "Form-not-betting visual law: betting imagery banned, app screen restricted, only reading = trainer's game plan",
+     "result": "PASS",
+     "detail": "\u00a78 never-in-frame list, prop_app_screen restriction restated, POD anchor carried"
+    },
+    {
+     "id": "C6",
+     "claim": "Kids appear as sport spectators only, never in ownership-decision scenes (FMA adjacency)",
+     "result": "PASS",
+     "detail": "kids register in \u00a75 with explicit spectator-only rule"
+    },
+    {
+     "id": "C7",
+     "claim": "Crowd cast: featured 25-48, background real spread, women as educated investors, lads one beat not the face",
+     "result": "PASS",
+     "detail": "\u00a76 complete; women ~40% + lads-balance left as ruling R1 (flagged, not silently decided)"
+    },
+    {
+     "id": "C8",
+     "claim": "Light register: permanent summer, golden hour edges, midday racing, night racing parked",
+     "result": "PASS",
+     "detail": "\u00a73 with night = later variant (R6 note)"
+    },
+    {
+     "id": "C9",
+     "claim": "Style anchor verbatim-identical to craft-rules.md:35",
+     "result": "PASS",
+     "detail": "'35mm lens, high shutter speed sports photography, broadcast 4K, photorealistic' + 9:16 anti-drift lead, \u00a74"
+    },
+    {
+     "id": "C10",
+     "claim": "File status = DRAFT v1 awaiting rulings R1-R5; rulings table present with proposals + touched files",
+     "result": "PASS",
+     "detail": "status header :3, rulings table :255-259"
+    },
+    {
+     "id": "C11",
+     "claim": "No cross-file conflicts introduced silently",
+     "result": "WARN",
+     "detail": "3 known conflicts with LOCKED Phase 1 files flagged in rulings table instead of edited: R2 characters.md:18 Barbour/tweed vs banned register; R3 bottles-and-hooks.md:28 'dirt-splattered' vs grass truth; R4 world.md:24 walnut-luxury vs nice-clean-functional (pre-approved). All await founder action; none silent"
+    }
+   ],
+   "evidence_edges": [
+    {
+     "finding": "C1",
+     "source": "evo_03/video-content/02_dna/crowd-and-venue.md:29-64",
+     "reason": "7 scene_ headers counted via search"
+    },
+    {
+     "finding": "C2",
+     "source": "evo_03/video-content/02_dna/crowd-and-venue.md:25,74-76,234",
+     "reason": "track names appear only as style refs + span language"
+    },
+    {
+     "finding": "C2",
+     "source": "evo_01/01_evolution/horses/prudentia/race-record.json",
+     "reason": "campaign tracks sourced from race records"
+    },
+    {
+     "finding": "C3",
+     "source": "evo_03/video-content/02_dna/crowd-and-venue.md:246",
+     "reason": "negative prompt contains 'no dirt track'"
+    },
+    {
+     "finding": "C3",
+     "source": "evo_03/video-content/01_narrative/bottles-and-hooks.md:28",
+     "reason": "locked file still says 'dirt-splattered' \u2014 routed to R3, not edited"
+    },
+    {
+     "finding": "C9",
+     "source": "evo_03/video-content/01_narrative/craft-rules.md:35",
+     "reason": "verbatim anchor match"
+    },
+    {
+     "finding": "C11",
+     "source": "evo_03/video-content/02_dna/crowd-and-venue.md:255-259",
+     "reason": "R2/R3/R4 rows present in rulings table"
+    },
+    {
+     "finding": "C11",
+     "source": "evo_03/video-content/01_narrative/characters.md:18",
+     "reason": "Barbour/tweed confirmed still in locked character sheet"
     }
    ]
   }

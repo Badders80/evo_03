@@ -14,7 +14,7 @@
 | **The Unlatched Chain** | Gate unlatching, walking onto turf | *"You aren't behind the fence. You're in the photo."* |
 | **The Morning Briefing** | Sunlit kitchen, coffee, trainer audio | *"Your morning coffee just got a lot more interesting."* |
 | **The Meeting Snap-Back** | High-speed turf shot → corporate office | *"Don't just daydream about Saturdays. Own them."* |
-| **The Jockey High-Five** | Dirt-splattered jockey in winner's circle | *"Stop being a spectator. Join the team."* |
+| **The Jockey High-Five** | Turf-splattered jockey in winner's circle | *"Stop being a spectator. Join the team."* |
 
 Each bottle expresses the Core Promise — *racing isn't a spectacle you watch,
 it's a human relationship you belong to* — from a different door.
@@ -25,13 +25,13 @@ it's a human relationship you belong to* — from a different door.
 
 Direct expression of triad pillar 3 ("you get the game plan"). Use as the
 spine of access/status stories: game plans, debriefs, sectionals, the
-pre-race briefing, the dirt-splattered post-race fist bump.
+pre-race briefing, the turf-splattered post-race fist bump.
 
 ## Insider Moments Vault (campaign 04, all ALIGNED)
 
 - **The Jockey Leg-Up** — "You aren't watching an athlete; you're sending your athlete into battle."
 - **The Heart-in-Throat Parade** — "Punters bet on numbers; owners feel the adrenaline in their chest."
-- **The Dirt-Splattered Debrief** — "Punters tear up losing tickets; owners get the post-match debrief."
+- **The Turf-Splattered Debrief** — "Punters tear up losing tickets; owners get the post-match debrief."
 - **The Unlatched Chain** — "Spectators take photos of the moment; owners are in the photo."
 
 ## Locked VO lines (approved verbatim)
