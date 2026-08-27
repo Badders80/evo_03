@@ -1,215 +1,390 @@
 {
- "audited_at": "2026-08-27",
+ "audited_at": "2026-08-27 (2 runs)",
  "scope": "evo_03 video-content Phase 1 + evo_00 ABOUT_AND_AUDIENCE migration + _shared/dna retirement",
- "findings": [
+ "runs": [
   {
-   "id": "C1",
-   "claim": "video-content/README.md has scope + governing SSOT + 3 binding rules + brand doc map",
-   "result": "PASS",
-   "detail": "all 8 required elements present"
+   "run": 1,
+   "findings": [
+    {
+     "id": "C1",
+     "claim": "video-content/README.md has scope + governing SSOT + 3 binding rules + brand doc map",
+     "result": "PASS",
+     "detail": "all 8 required elements present"
+    },
+    {
+     "id": "C2",
+     "claim": "characters.md: 4-char cast, fictional flag, pundits dropped, Alex renamed, no-price rule",
+     "result": "PASS",
+     "detail": "all 5 sub-checks true"
+    },
+    {
+     "id": "C3",
+     "claim": "world.md: 4 locations + 4 props, $85 stripped from app_screen",
+     "result": "PASS",
+     "detail": "all 8 elements + $85 ban present"
+    },
+    {
+     "id": "C4",
+     "claim": "story-structures.md: Audio Snap w/ announcer=character, 4-beat, 5-element formula, 3 golden rules",
+     "result": "PASS",
+     "detail": "all 4 sub-checks"
+    },
+    {
+     "id": "C5",
+     "claim": "bottles-and-hooks.md: 4 bottles, POD anchor, 'Own the Experience' adaptation, bumper close",
+     "result": "PASS",
+     "detail": "all 4 sub-checks"
+    },
+    {
+     "id": "C6",
+     "claim": "craft-rules.md: Fight Club rule first, style anchor, safe zones, audio layers, fictional flag",
+     "result": "PASS",
+     "detail": "initial FAIL was audit-checker bug (multi-line string match); sed 9-16 confirms"
+    },
+    {
+     "id": "C7",
+     "claim": "EXTRACTION_INVENTORY.md archived w/ 3 rulings + RESOLVED",
+     "result": "PASS",
+     "detail": "initial FAIL was checker bug (case handling); lines 3,9-16 confirm"
+    },
+    {
+     "id": "C8",
+     "claim": "evo_00/doc/ABOUT_AND_AUDIENCE.md = LOCKED SSOT, verbatim migration w/ provenance",
+     "result": "PASS",
+     "detail": "header + 9 key sections + old file stubbed"
+    },
+    {
+     "id": "C9",
+     "claim": "all 4 _shared/dna files are MOVED/RETIRED stubs",
+     "result": "PASS",
+     "detail": "about/voice/brand/tokens.css all stubbed"
+    },
+    {
+     "id": "C10",
+     "claim": "04_comms/AGENTS.md law 2 re-pointed",
+     "result": "PASS",
+     "detail": "now cites evo_00 canonical docs + retired note"
+    },
+    {
+     "id": "C11",
+     "claim": "04_comms/strategy/README.md canonical table re-pointed",
+     "result": "PASS",
+     "detail": "table -> evo_00/doc/*, stub note present"
+    },
+    {
+     "id": "C12",
+     "claim": "06_content-pipeline + _template + legacy AGENTS.md re-pointed",
+     "result": "PASS",
+     "detail": "all 3 cite evo_00 + brand_dna, RETIRED marker"
+    },
+    {
+     "id": "C13",
+     "claim": "evo_01/README.md DNA section retired",
+     "result": "PASS",
+     "detail": "line 68 'Slim Central DNA (retired 2026-08-27)'"
+    },
+    {
+     "id": "C14",
+     "claim": "no live canonical pointers to _shared/dna remain",
+     "result": "PASS",
+     "detail": "1 found during audit (BRAND_KIT.md header) \u2014 fixed mid-audit, re-scan clean"
+    },
+    {
+     "id": "C15",
+     "claim": "brand_dna typecheck green",
+     "result": "PASS",
+     "detail": "npx tsc --noEmit -> EXIT=0"
+    },
+    {
+     "id": "C16",
+     "claim": "brand_dna voice tests pass",
+     "result": "PASS",
+     "detail": "'All brand_dna voice tests passed' in stdout (3 blocks: banned terms, exclamations, taxonomy)"
+    },
+    {
+     "id": "C17",
+     "claim": "banned-term hygiene in canonical narrative files",
+     "result": "PASS",
+     "detail": "0 live 'Own the asset'; $85 only inside ban statements; ROI 0 hits in narrative"
+    }
+   ],
+   "evidence_edges": [
+    {
+     "finding": "C1",
+     "source": "evo_03/video-content/README.md",
+     "reason": "grep: Phase 1 / 3 SSOT docs / 3 binding rules / ABOUT_AND_AUDIENCE map all present"
+    },
+    {
+     "finding": "C2",
+     "source": "evo_03/video-content/01_narrative/characters.md",
+     "reason": "full read: cast, FICTIONAL+noBorrowedAuthority, 'Dropped from this phase', Alex rename, 'never mention price'"
+    },
+    {
+     "finding": "C3",
+     "source": "evo_03/video-content/01_narrative/world.md:44-46",
+     "reason": "prop_app_screen RESTRICTED section: 'NEVER appear on screen', 'live status + horse name only'"
+    },
+    {
+     "finding": "C4",
+     "source": "evo_03/video-content/01_narrative/story-structures.md",
+     "reason": "'quoted fictional character'/'never brand voice'; Beat 1/Beat 4 timestamps; formula + golden rules"
+    },
+    {
+     "finding": "C5",
+     "source": "evo_03/video-content/01_narrative/bottles-and-hooks.md",
+     "reason": "4 bottle names, POD anchor verbatim, 'Stop buying souvenirs. Own the Experience.', bumper close"
+    },
+    {
+     "finding": "C6",
+     "source": "evo_03/video-content/01_narrative/craft-rules.md:9-13",
+     "reason": "heading 'The First Rule of Fight Club (price)'; 'nominal purchase price never appears in narrative content'"
+    },
+    {
+     "finding": "C7",
+     "source": "evo_03/video-content/EXTRACTION_INVENTORY.md:3",
+     "reason": "'Status: RESOLVED \u2014 all rulings made 2026-08-27'"
+    },
+    {
+     "finding": "C7",
+     "source": "evo_03/video-content/EXTRACTION_INVENTORY.md:9-16",
+     "reason": "3 rulings: DROPPED / FIGHT CLUB RULE / Own the asset -> Own the Experience"
+    },
+    {
+     "finding": "C8",
+     "source": "evo_00/doc/ABOUT_AND_AUDIENCE.md:3",
+     "reason": "'Status: LOCKED SSOT (migrated 2026-08-27...' + Provenance section"
+    },
+    {
+     "finding": "C8",
+     "source": "evo_01/_shared/dna/about.md:1",
+     "reason": "'# About Me \u2014 MOVED (RETIRED 2026-08-27)'"
+    },
+    {
+     "finding": "C9",
+     "source": "evo_01/_shared/dna/{about,voice,brand}.md + tokens.css",
+     "reason": "head -1 of each shows MOVED/RETIRED marker; all 4 stubbed"
+    },
+    {
+     "finding": "C10",
+     "source": "evo_01/pipelines/comms/04_comms/AGENTS.md:28",
+     "reason": "law 2 cites evo_00/doc/ABOUT_AND_AUDIENCE.md + VOICE_AND_TONE_MANUAL.md + IDENTITY.md, '_shared/dna/ (retired)'"
+    },
+    {
+     "finding": "C11",
+     "source": "evo_01/pipelines/comms/04_comms/strategy/README.md:6-12",
+     "reason": "canonical table -> evo_00/doc/*; 'MOVED-stubs' note"
+    },
+    {
+     "finding": "C12",
+     "source": "evo_01/pipelines/studio/06_content-pipeline/AGENTS.md:19",
+     "reason": "'canonical brand SSOT lives in evo_00/doc/' + RETIRED"
+    },
+    {
+     "finding": "C12",
+     "source": "evo_01/_template/AGENTS.md:28",
+     "reason": "same re-point"
+    },
+    {
+     "finding": "C12",
+     "source": "evo_01/pipelines/studio/legacy/AGENTS.md:18",
+     "reason": "same re-point"
+    },
+    {
+     "finding": "C13",
+     "source": "evo_01/README.md:68",
+     "reason": "'### Slim Central DNA (retired 2026-08-27)'"
+    },
+    {
+     "finding": "C14",
+     "source": "evo_01/01_evolution/dna/brand/BRAND_KIT.md:1-12",
+     "reason": "FAIL during audit: header pointed at _shared/dna/ as canonical; FIXED mid-audit to evo_00/doc/; re-scan clean"
+    },
+    {
+     "finding": "C15",
+     "source": "evo_02/packages/brand_dna (command)",
+     "reason": "npx tsc --noEmit -> EXIT=0"
+    },
+    {
+     "finding": "C16",
+     "source": "evo_02/packages/brand_dna/tests/voice.test.ts",
+     "reason": "npx tsx tests/voice.test.ts -> 'All brand_dna voice tests passed'"
+    },
+    {
+     "finding": "C17",
+     "source": "evo_03/video-content/01_narrative/ (grep ROI|Own the asset|$85)",
+     "reason": "0 live 'Own the asset'; $85 only in ban statements (craft-rules.md:16, world.md:46); 0 ROI hits"
+    }
+   ]
   },
   {
-   "id": "C2",
-   "claim": "characters.md: 4-char cast, fictional flag, pundits dropped, Alex renamed, no-price rule",
-   "result": "PASS",
-   "detail": "all 5 sub-checks true"
-  },
-  {
-   "id": "C3",
-   "claim": "world.md: 4 locations + 4 props, $85 stripped from app_screen",
-   "result": "PASS",
-   "detail": "all 8 elements + $85 ban present"
-  },
-  {
-   "id": "C4",
-   "claim": "story-structures.md: Audio Snap w/ announcer=character, 4-beat, 5-element formula, 3 golden rules",
-   "result": "PASS",
-   "detail": "all 4 sub-checks"
-  },
-  {
-   "id": "C5",
-   "claim": "bottles-and-hooks.md: 4 bottles, POD anchor, 'Own the Experience' adaptation, bumper close",
-   "result": "PASS",
-   "detail": "all 4 sub-checks"
-  },
-  {
-   "id": "C6",
-   "claim": "craft-rules.md: Fight Club rule first, style anchor, safe zones, audio layers, fictional flag",
-   "result": "PASS",
-   "detail": "initial FAIL was audit-checker bug (multi-line string match); sed 9-16 confirms"
-  },
-  {
-   "id": "C7",
-   "claim": "EXTRACTION_INVENTORY.md archived w/ 3 rulings + RESOLVED",
-   "result": "PASS",
-   "detail": "initial FAIL was checker bug (case handling); lines 3,9-16 confirm"
-  },
-  {
-   "id": "C8",
-   "claim": "evo_00/doc/ABOUT_AND_AUDIENCE.md = LOCKED SSOT, verbatim migration w/ provenance",
-   "result": "PASS",
-   "detail": "header + 9 key sections + old file stubbed"
-  },
-  {
-   "id": "C9",
-   "claim": "all 4 _shared/dna files are MOVED/RETIRED stubs",
-   "result": "PASS",
-   "detail": "about/voice/brand/tokens.css all stubbed"
-  },
-  {
-   "id": "C10",
-   "claim": "04_comms/AGENTS.md law 2 re-pointed",
-   "result": "PASS",
-   "detail": "now cites evo_00 canonical docs + retired note"
-  },
-  {
-   "id": "C11",
-   "claim": "04_comms/strategy/README.md canonical table re-pointed",
-   "result": "PASS",
-   "detail": "table -> evo_00/doc/*, stub note present"
-  },
-  {
-   "id": "C12",
-   "claim": "06_content-pipeline + _template + legacy AGENTS.md re-pointed",
-   "result": "PASS",
-   "detail": "all 3 cite evo_00 + brand_dna, RETIRED marker"
-  },
-  {
-   "id": "C13",
-   "claim": "evo_01/README.md DNA section retired",
-   "result": "PASS",
-   "detail": "line 68 'Slim Central DNA (retired 2026-08-27)'"
-  },
-  {
-   "id": "C14",
-   "claim": "no live canonical pointers to _shared/dna remain",
-   "result": "PASS",
-   "detail": "1 found during audit (BRAND_KIT.md header) \u2014 fixed mid-audit, re-scan clean"
-  },
-  {
-   "id": "C15",
-   "claim": "brand_dna typecheck green",
-   "result": "PASS",
-   "detail": "npx tsc --noEmit -> EXIT=0"
-  },
-  {
-   "id": "C16",
-   "claim": "brand_dna voice tests pass",
-   "result": "PASS",
-   "detail": "'All brand_dna voice tests passed' in stdout (3 blocks: banned terms, exclamations, taxonomy)"
-  },
-  {
-   "id": "C17",
-   "claim": "banned-term hygiene in canonical narrative files",
-   "result": "PASS",
-   "detail": "0 live 'Own the asset'; $85 only inside ban statements; ROI 0 hits in narrative"
-  }
- ],
- "evidence_edges": [
-  {
-   "finding": "C1",
-   "source": "evo_03/video-content/README.md",
-   "reason": "grep: Phase 1 / 3 SSOT docs / 3 binding rules / ABOUT_AND_AUDIENCE map all present"
-  },
-  {
-   "finding": "C2",
-   "source": "evo_03/video-content/01_narrative/characters.md",
-   "reason": "full read: cast, FICTIONAL+noBorrowedAuthority, 'Dropped from this phase', Alex rename, 'never mention price'"
-  },
-  {
-   "finding": "C3",
-   "source": "evo_03/video-content/01_narrative/world.md:44-46",
-   "reason": "prop_app_screen RESTRICTED section: 'NEVER appear on screen', 'live status + horse name only'"
-  },
-  {
-   "finding": "C4",
-   "source": "evo_03/video-content/01_narrative/story-structures.md",
-   "reason": "'quoted fictional character'/'never brand voice'; Beat 1/Beat 4 timestamps; formula + golden rules"
-  },
-  {
-   "finding": "C5",
-   "source": "evo_03/video-content/01_narrative/bottles-and-hooks.md",
-   "reason": "4 bottle names, POD anchor verbatim, 'Stop buying souvenirs. Own the Experience.', bumper close"
-  },
-  {
-   "finding": "C6",
-   "source": "evo_03/video-content/01_narrative/craft-rules.md:9-13",
-   "reason": "heading 'The First Rule of Fight Club (price)'; 'nominal purchase price never appears in narrative content'"
-  },
-  {
-   "finding": "C7",
-   "source": "evo_03/video-content/EXTRACTION_INVENTORY.md:3",
-   "reason": "'Status: RESOLVED \u2014 all rulings made 2026-08-27'"
-  },
-  {
-   "finding": "C7",
-   "source": "evo_03/video-content/EXTRACTION_INVENTORY.md:9-16",
-   "reason": "3 rulings: DROPPED / FIGHT CLUB RULE / Own the asset -> Own the Experience"
-  },
-  {
-   "finding": "C8",
-   "source": "evo_00/doc/ABOUT_AND_AUDIENCE.md:3",
-   "reason": "'Status: LOCKED SSOT (migrated 2026-08-27...' + Provenance section"
-  },
-  {
-   "finding": "C8",
-   "source": "evo_01/_shared/dna/about.md:1",
-   "reason": "'# About Me \u2014 MOVED (RETIRED 2026-08-27)'"
-  },
-  {
-   "finding": "C9",
-   "source": "evo_01/_shared/dna/{about,voice,brand}.md + tokens.css",
-   "reason": "head -1 of each shows MOVED/RETIRED marker; all 4 stubbed"
-  },
-  {
-   "finding": "C10",
-   "source": "evo_01/pipelines/comms/04_comms/AGENTS.md:28",
-   "reason": "law 2 cites evo_00/doc/ABOUT_AND_AUDIENCE.md + VOICE_AND_TONE_MANUAL.md + IDENTITY.md, '_shared/dna/ (retired)'"
-  },
-  {
-   "finding": "C11",
-   "source": "evo_01/pipelines/comms/04_comms/strategy/README.md:6-12",
-   "reason": "canonical table -> evo_00/doc/*; 'MOVED-stubs' note"
-  },
-  {
-   "finding": "C12",
-   "source": "evo_01/pipelines/studio/06_content-pipeline/AGENTS.md:19",
-   "reason": "'canonical brand SSOT lives in evo_00/doc/' + RETIRED"
-  },
-  {
-   "finding": "C12",
-   "source": "evo_01/_template/AGENTS.md:28",
-   "reason": "same re-point"
-  },
-  {
-   "finding": "C12",
-   "source": "evo_01/pipelines/studio/legacy/AGENTS.md:18",
-   "reason": "same re-point"
-  },
-  {
-   "finding": "C13",
-   "source": "evo_01/README.md:68",
-   "reason": "'### Slim Central DNA (retired 2026-08-27)'"
-  },
-  {
-   "finding": "C14",
-   "source": "evo_01/01_evolution/dna/brand/BRAND_KIT.md:1-12",
-   "reason": "FAIL during audit: header pointed at _shared/dna/ as canonical; FIXED mid-audit to evo_00/doc/; re-scan clean"
-  },
-  {
-   "finding": "C15",
-   "source": "evo_02/packages/brand_dna (command)",
-   "reason": "npx tsc --noEmit -> EXIT=0"
-  },
-  {
-   "finding": "C16",
-   "source": "evo_02/packages/brand_dna/tests/voice.test.ts",
-   "reason": "npx tsx tests/voice.test.ts -> 'All brand_dna voice tests passed'"
-  },
-  {
-   "finding": "C17",
-   "source": "evo_03/video-content/01_narrative/ (grep ROI|Own the asset|$85)",
-   "reason": "0 live 'Own the asset'; $85 only in ban statements (craft-rules.md:16, world.md:46); 0 ROI hits"
+   "audited_at": "2026-08-27 (run 2: legacy submodule diagnosis)",
+   "scope": "pipelines/studio/legacy broken gitlink + live/dead classification",
+   "findings": [
+    {
+     "id": "L1",
+     "claim": "pipelines/studio/legacy is a broken gitlink: parent index has mode 160000 commit f2e29ae, but object is unreachable (git cat-file fails) and folder has no .git",
+     "result": "FAIL",
+     "detail": "Parent repo claims a submodule that cannot exist; fresh clone would break"
+    },
+    {
+     "id": "L2",
+     "claim": "legacy content (223MB) was NEVER committed anywhere \u2014 no parent history, no reachable submodule commit",
+     "result": "FAIL",
+     "detail": "'git log --all -- pipelines/studio/legacy/templates/*' empty; gitlink object missing. Entire folder is unversioned: single point of failure"
+    },
+    {
+     "id": "L3",
+     "claim": "legacy is not dead: templates/ = LIVE master template system used for the 2026-08-21 investor send (hottathanafantasy), documented in templates/README.md as locked-in",
+     "result": "FAIL-TO-DELETE",
+     "detail": "Any 'just delete legacy' action would destroy the only copy of the investor email template system"
+    },
+    {
+     "id": "L4",
+     "claim": "04_comms scripts hardcode broken paths to 03_studio/templates: run_post_race_auto.sh:32,77 + schedule_post_race.sh:27 + generate_social_caption.py:14 resolve to /home/evo/evo_01/... and pipelines/comms/03_studio \u2014 neither exists",
+     "result": "FAIL",
+     "detail": "Live investor-update automation points at a path that died when 03_studio moved to pipelines/studio/legacy"
+    },
+    {
+     "id": "L5",
+     "claim": "parent .gitignore deliberately keeps some untracked dirs (_taskmaster pattern), so untracking legacy-as-regular-files has precedent",
+     "result": "PASS",
+     "detail": ".gitignore:5-8 'Retired productivity tooling \u2014 kept on disk, not tracked by parent'"
+    },
+    {
+     "id": "L6",
+     "claim": "heavy dead weight inside legacy: poster-builder 86MB (85MB node_modules), racing_bot 71MB, gemini 17MB, out 38MB = ~212MB of the 223MB",
+     "result": "PASS",
+     "detail": "du verified; legacy's own continue.md marks racing_bot purge pending"
+    },
+    {
+     "id": "L7-V1",
+     "claim": "verification",
+     "result": "PASS",
+     "detail": "index modes under legacy: ['100644', '100755', '120000']"
+    },
+    {
+     "id": "L8-V2",
+     "claim": "verification",
+     "result": "PASS",
+     "detail": "remaining gitlinks (all healthy): ['02_website', 'pipelines/comms/04_comms', 'pipelines/racing-data/05_industry-data', 'pipelines/studio/06_content-pipeline']"
+    },
+    {
+     "id": "L9-V3",
+     "claim": "verification",
+     "result": "PASS",
+     "detail": "HEAD tree now has blobs under legacy: '100644 blob 0c037823b47ef65809100d5dfb6b50833430243e\\tpipelines/studio/legacy/.en'"
+    },
+    {
+     "id": "L10-V4",
+     "claim": "verification",
+     "result": "PASS",
+     "detail": "real .env never committed: 0\n0\n"
+    },
+    {
+     "id": "L11-V5",
+     "claim": "verification",
+     "result": "PASS",
+     "detail": "checker bug (head -5 truncated list); full ls-files shows 18 template files incl. investor_update_email_master.html"
+    },
+    {
+     "id": "L12-V6",
+     "claim": "verification",
+     "result": "PASS",
+     "detail": "disk content intact: /home/evo/new/evo_01/pipelines/studio/legacy/templates/investor_update_email_master.html\n223M\t/home/evo/new/evo_01/pipelines/studio/legacy/"
+    }
+   ],
+   "evidence_edges": [
+    {
+     "finding": "L1",
+     "source": "evo_01 git index (git ls-files --stage pipelines/studio/legacy)",
+     "reason": "mode 160000 f2e29aec...; git cat-file -t -> 'could not get object info'"
+    },
+    {
+     "finding": "L1",
+     "source": "evo_01/pipelines/studio/legacy/ (ls -la)",
+     "reason": "no .git entry in folder"
+    },
+    {
+     "finding": "L2",
+     "source": "git log --all -- 'pipelines/studio/legacy/*'",
+     "reason": "no commits ever tracked legacy file content"
+    },
+    {
+     "finding": "L2",
+     "source": "sprint-2 commit ce38dce message",
+     "reason": "'the_one/, scratch/, raw_original/, .venv/ (7.8GB), .git/ (244MB)' \u2014 legacy's own git history was deleted during dead-code cleanup"
+    },
+    {
+     "finding": "L3",
+     "source": "evo_01/pipelines/studio/legacy/templates/README.md:1-8",
+     "reason": "'official, locked-in master templates for Evolution Stables Investor Updates'"
+    },
+    {
+     "finding": "L3",
+     "source": "evo_01/pipelines/comms/04_comms/inbox/hottathanafantasy_stable_report_21august2026_email_SEND.html (Aug 21)",
+     "reason": "most recent send used this template system"
+    },
+    {
+     "finding": "L4",
+     "source": "evo_01/pipelines/comms/04_comms/scripts/run_post_race_auto.sh:7,32",
+     "reason": "COMMS=/home/evo/evo_01/04_comms (path does not exist); $COMMS/../03_studio/templates resolves to missing dir"
+    },
+    {
+     "finding": "L4",
+     "source": "evo_01/pipelines/comms/04_comms/scripts/generate_social_caption.py:14",
+     "reason": "parents[2]/03_studio/templates -> pipelines/comms/03_studio/templates, exists=False (verified pathlib)"
+    },
+    {
+     "finding": "L5",
+     "source": "evo_01/.gitignore:5-8",
+     "reason": "'_taskmaster/ \u2014 kept on disk, not tracked by parent' precedent"
+    },
+    {
+     "finding": "L6",
+     "source": "du -sh legacy/*",
+     "reason": "poster-builder 86M (node_modules 85M), racing_bot 71M, out 38M, gemini 17M"
+    },
+    {
+     "finding": "L6",
+     "source": "evo_01/pipelines/studio/legacy/continue.md '## Next action'",
+     "reason": "Track C purge incl. racing_bot marked pending; Remotion keep/kill undecided"
+    },
+    {
+     "finding": "L7-V1",
+     "source": "git ls-files --stage pipelines/studio/legacy",
+     "reason": "modes=100644\n100755\n120000"
+    },
+    {
+     "finding": "L8-V2",
+     "source": "git ls-files --stage | awk 160000",
+     "reason": "['02_website', 'pipelines/comms/04_comms', 'pipelines/racing-data/05_industry-data', 'pipelines/studio/06_content-pipeline']"
+    },
+    {
+     "finding": "L9-V3",
+     "source": "git ls-tree HEAD pipelines/studio/legacy/",
+     "reason": "100644 blob 0c037823b47ef65809100d5dfb6b50833430243e\tpipelines/studio/legacy/.env.template\n100644 blob 19b82030f2cddea02"
+    },
+    {
+     "finding": "L10-V4",
+     "source": "git show HEAD --stat",
+     "reason": "no .env entry"
+    },
+    {
+     "finding": "L11-V5",
+     "source": "git ls-files legacy/templates/",
+     "reason": "pipelines/studio/legacy/templates/README.md\npipelines/studio/legacy/templates/arial.ttf\npipelines/studio/legacy/templates/email_teaser_master.html\npip"
+    },
+    {
+     "finding": "L12-V6",
+     "source": "ls + du",
+     "reason": "/home/evo/new/evo_01/pipelines/studio/legacy/templates/investor_update_email_mas"
+    },
+    {
+     "finding": "L11-V5",
+     "source": "git ls-files pipelines/studio/legacy/templates/",
+     "reason": "18 files tracked incl. investor_update_email_master.html, generate_update.py, schema.json"
+    }
+   ]
   }
  ]
 }
