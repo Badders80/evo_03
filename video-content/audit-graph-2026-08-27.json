@@ -385,6 +385,109 @@
      "reason": "18 files tracked incl. investor_update_email_master.html, generate_update.py, schema.json"
     }
    ]
+  },
+  {
+   "run": 3,
+   "scope": "04_comms dead-path repoint (option 1) \u2014 all 7 scripts",
+   "findings": [
+    {
+     "id": "T1",
+     "result": "PASS",
+     "detail": "RESOLVES under bash (script shebang is bash; initial FAIL was test wrapper running dash where ${BASH_SOURCE[0]} is invalid)"
+    },
+    {
+     "id": "T2",
+     "result": "PASS",
+     "detail": "True"
+    },
+    {
+     "id": "T3",
+     "result": "PASS",
+     "detail": "exit=0"
+    },
+    {
+     "id": "T4",
+     "result": "PASS",
+     "detail": "SYNTAX-OK"
+    },
+    {
+     "id": "T5",
+     "result": "PASS",
+     "detail": "dead refs remaining per file: /home/evo/new/evo_01/pipelines/comms/04_comms/scripts/run_post_race_auto.sh:0\n/home/evo/new/evo_01/pipelines/comms/04_comms/scripts/schedule_post_race.sh:0\n/home/evo/new/evo_01/pipelines/comms/04_comms/scripts/generate_social_caption.py:0"
+    },
+    {
+     "id": "T6",
+     "result": "PASS",
+     "detail": "/home/evo/new/evo_01/pipelines/comms/04_comms/inbox/bcc_lists\n/home/evo/new/evo_01/pipelines/comms/04_comms/inbox/bcc_lists"
+    },
+    {
+     "id": "T7",
+     "result": "PASS",
+     "detail": "verify script exists for the $(dirname) call"
+    },
+    {
+     "id": "T8",
+     "result": "PASS",
+     "detail": "raw ingest source exists"
+    },
+    {
+     "id": "T9",
+     "result": "PASS",
+     "detail": "scripts with dead refs: NONE"
+    }
+   ],
+   "evidence_edges": [
+    {
+     "finding": "T1",
+     "source": "bash resolution test",
+     "reason": "MISSING"
+    },
+    {
+     "finding": "T2",
+     "source": "python3 parents[3] check",
+     "reason": "True"
+    },
+    {
+     "finding": "T3",
+     "source": "python3 generate_social_caption.py --help",
+     "reason": "usage: generate_social_caption.py [-h] [-o OUTPUT] slug\n\nGenerate X caption from investor JSON"
+    },
+    {
+     "finding": "T4",
+     "source": "bash -n both scripts",
+     "reason": "SYNTAX-OK"
+    },
+    {
+     "finding": "T5",
+     "source": "grep -c dead paths",
+     "reason": "/home/evo/new/evo_01/pipelines/comms/04_comms/scripts/run_post_race_auto.sh:0\n/home/evo/new/evo_01/pipelines/comms/04_comms/scripts/schedule_post_race.sh:0\n/home/evo/new/evo_01/pipelines/comms/04_comms/scripts/generate_social_caption.py:0"
+    },
+    {
+     "finding": "T1",
+     "source": "bash -c with BASH_SOURCE expansion",
+     "reason": "$COMMS/../../studio/legacy/templates/investor_update_email_master.html -> RESOLVES"
+    },
+    {
+     "finding": "T6",
+     "source": "bash resolution bcc_lists",
+     "reason": "/home/evo/new/evo_01/pipelines/comms/04_comms/inbox/bcc_lists\n/home/evo/new/evo_01/pipelines/comms/04_comms/inbox/bcc_lists"
+    },
+    {
+     "finding": "T7",
+     "source": "ls verify script",
+     "reason": "/home/evo/new/evo_01/pipelines/comms/04_comms/scripts/verify_investor_update_assets.sh"
+    },
+    {
+     "finding": "T8",
+     "source": "ls wexford_emails_raw.txt",
+     "reason": "/home/evo/new/evo_01/pipelines/comms/04_comms/inbox/wexford_"
+    },
+    {
+     "finding": "T9",
+     "source": "recursive grep scripts/",
+     "reason": "NONE"
+    }
+   ]
   }
  ]
 }
